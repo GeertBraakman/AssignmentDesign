@@ -36,6 +36,12 @@ public class PlayerControler : MonoBehaviour
         if (other.gameObject.CompareTag("PickUp")) 
         {
             other.gameObject.SetActive(false);
+            speed = speed + 5;
+        } 
+        else if (other.gameObject.CompareTag("Enemy"))
+        {
+            transform.position = new Vector3(0, -1, 0);
         }
+        
     }
 }
